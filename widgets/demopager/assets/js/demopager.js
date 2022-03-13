@@ -23,7 +23,7 @@ var demoPagerWidget = {
 
                 // new RegExp("\(&page=\)\\d+", "gi")
                 var pattern = new RegExp("\(&" + pageParam + "=\)\\d+", "gi");
-                var newUrl = url.replace(pattern, "$1"+targetPage);
+                var newUrl = url.replace(pattern, "$1"+targetPage);// todo this line not replace nothing in my url (/index?page=1)
                 window.location.href = newUrl;
             }
         });
@@ -34,7 +34,7 @@ var demoPagerWidget = {
 
             // new RegExp("\(&per-page=\)\\d+", "gi")
             var pattern = new RegExp("\(&" + pageSizeParam + "=\)\\d+", "gi");
-            var newUrl = url.replace(pattern, "$1"+selectedPageSize);
+            var newUrl = url.replace(pattern, "$1"+selectedPageSize);// todo this line have not the "per-page" text to search and replace
             window.location.href = newUrl;
         });
     }
